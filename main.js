@@ -33,7 +33,7 @@ const randVerb = ["aim", "arouse", "argue", "arise", "bounce", "buy", "blow", "b
     "follow", "feel", "fight", "guide", "gain", "grasp", "greet", "grant", "gaze", "give", "hold", "hurt", "heat", "hang", "hide", "incur", "improve", "inquire", 
     "indentify", "introduce", "join", "jump", "jiggle", "kiss", "kick", "knock", "knit", "keep", "lie", "link", "look", "live", "love", "lick", "laugh", "listen", "monitor",
     "modify", "merge", "make", "mill", "move", "notice", "nod", "need", "negotiate", "overcome", "operate", "organize", "own", "outline", "paint", "pray", "proclaim",
-    "preserce", "pull", "press", "pat", "plant", "plop", "quote", "question", "run", "ride", "rule", "raise", "rate", "record", "roll", "reflect", "shout", "smoke", "stand",
+    "preserve", "pull", "press", "pat", "plant", "plop", "quote", "question", "run", "ride", "rule", "raise", "rate", "record", "roll", "reflect", "shout", "smoke", "stand",
     "summon", "shake", "stack", "stump", "spoil", "smile", "swim", "see", "trap", "tackle", "translate", "tell", "tuck", "think", "twist", "tickle", "trade", "transport",
     "toss", "underline", "use", "urinate", "urge", "unite", "vanish", "view", "value", "visit", "wander", "write", "whine", "witness", "wash", "whisper", "win", "yield"
 ];
@@ -56,10 +56,10 @@ const adLibPicker = () => {
         case (pickMessage === 1):
             console.log(`The Tale of ${wordPicker(randNoun)} the ${wordPicker(randAdj)} \n
             Once upon a time, there was a ${wordPicker(randAdj)} ${wordPicker(randNoun)}, who always liked to ${wordPicker(randVerb)}.\n
-            One day, the ${wordPicker(randNoun)} went to the ${wordPicker(randNoun)} to ${workPicker(randVerb)} a box containing one \n
+            One day, the ${wordPicker(randNoun)} went to the ${wordPicker(randNoun)} to ${wordPicker(randVerb)} a box containing one \n
             ${wordPicker(randAdj)} ${wordPicker(randNoun)}. Suprised by this, the ${wordPicker(randNoun)} watched as the ${wordPicker(randNoun)} \n
             tried to ${wordPicker(randVerb)} its way to the front. The ${wordPicker(randAdj)} look on its ${wordPicker(randNoun)} was obvious to anyone \n
-            who tried to have a ${wordPicker(randVerb)} at it.`);
+            who tried to ${wordPicker(randVerb)} at it.`);
             break;
         case (pickMessage === 2):
             console.log(`Recipe for Making Seared ${wordPicker(randNoun)} \n
@@ -70,13 +70,16 @@ const adLibPicker = () => {
             Pour into another ${wordPicker(randAdj)} bowl with the butter, and ${wordPicker(randVerb)} the onions directly on top.\n
             Set oven to 350 degrees. ${wordPicker(randVerb)} to your mixture before you ${wordPicker(randVerb)} it in the oven \n
             Bake for 30-35 minutes. Remove from the oven. \n
-            What in heaven's ${wordPicker(randNoun)}} did you just create?`);
+            What in heaven's ${wordPicker(randNoun)} did you just create?`);
             break;
         case (pickMessage === 3):
-            console.log(`Here is your ${wordPicker(randAdj)} fortune: \n`);
+            console.log(`Here is your ${wordPicker(randAdj)} fortune: \n You will have a/an ${wordPicker(randAdj)} day. \n
+            Tomorrow you will ${wordPicker(randVerb)} a ${wordPicker(randNoun)}. All day.\n Lucky Lotto numbers: 2, 24, 34, 45, 60`);
             break;
         case (pickMessage === 4):
-            console.log(`Here is some great life advice`);
+            console.log(`Here is some life advice: \n Seek truth, align yourself with it, Be truth, and inspire others \n to
+                do the same. Never back down, or be ashamed to speak the truth. To fail at this would incite evil. Be blessed and \n
+                stay in the Light.`);
     }
     
 }
