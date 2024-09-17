@@ -23,7 +23,7 @@ const randNoun = ["actor", "apple", "ant", "alcohol", "aardvark", "airport", "ai
     "jungle", "jam", "kite", "key", "kitchen", "kazoo", "king", "koala", "lamp", "lion", "library", "lemon", "lime", "laptop", "mountain", "moon", "music", "muffin", "map",
     "monkey", "mouse", "mice", "notebook", "night", "nurse", "net", "ninja", "ocean", "orange", "oven", "octopus", "olive", "pencil", "plane", "park", "pickle", "pasta",
     "pepper", "pulley", "pog", "pig", "queen", "quilt", "quail", "quarter", "river", "rain", "robot", "runner", "radish", "relish", "rock", "rump", "roast", "rope", "sun",
-    "school", "star", "state", "salami", "shell", "spoon", "spork", "tree", "train", "table", "tack", "toad", "turnip", "umbrella", "unicorn", "uniform", "uncle", "violin",
+    "school", "star", "state", "salami", "shell", "spoon", "salmon", "spork", "tree", "train", "table", "tack", "toad", "turnip", "umbrella", "unicorn", "uniform", "uncle", "violin",
     "volcano", "vase", "vasoline", "water", "window", "whale", "womper", "willow", "xylophone", "xenon", "xray", "yacht", "yarn", "yolk", "yak", "zebra", "zoo", "zipper"
 ];
 
@@ -33,7 +33,7 @@ const randVerb = ["aim", "arouse", "argue", "arise", "bounce", "buy", "blow", "b
     "follow", "feel", "fight", "guide", "gain", "grasp", "greet", "grant", "gaze", "give", "hold", "hurt", "heat", "hang", "hide", "incur", "improve", "inquire", 
     "indentify", "introduce", "join", "jump", "jiggle", "kiss", "kick", "knock", "knit", "keep", "lie", "link", "look", "live", "love", "lick", "laugh", "listen", "monitor",
     "modify", "merge", "make", "mill", "move", "notice", "nod", "need", "negotiate", "overcome", "operate", "organize", "own", "outline", "paint", "pray", "proclaim",
-    "preserce", "pull", "press", "pat", "plant", "quote", "question", "run", "ride", "rule", "raise", "rate", "record", "roll", "reflect", "shout", "smoke", "stand",
+    "preserce", "pull", "press", "pat", "plant", "plop", "quote", "question", "run", "ride", "rule", "raise", "rate", "record", "roll", "reflect", "shout", "smoke", "stand",
     "summon", "shake", "stack", "stump", "spoil", "smile", "swim", "see", "trap", "tackle", "translate", "tell", "tuck", "think", "twist", "tickle", "trade", "transport",
     "toss", "underline", "use", "urinate", "urge", "unite", "vanish", "view", "value", "visit", "wander", "write", "whine", "witness", "wash", "whisper", "win", "yield"
 ];
@@ -47,3 +47,38 @@ const wordPicker = (array) => {
 /*console.log(wordPicker(randAdj));
 console.log(wordPicker(randVerb));
 console.log(wordPicker(randNoun));*/
+
+//A function that will randomly choose an ad-lib to display content
+const adLibPicker = () => {
+    let pickMessage = Math.floor((Math.random() * 4) + 1);//a variable that randomly selects an ad-lib
+
+    switch (true) {
+        case (pickMessage === 1):
+            console.log(`The Tale of ${wordPicker(randNoun)} the ${wordPicker(randAdj)} \n
+            Once upon a time, there was a ${wordPicker(randAdj)} ${wordPicker(randNoun)}, who always liked to ${wordPicker(randVerb)}.\n
+            One day, the ${wordPicker(randNoun)} went to the ${wordPicker(randNoun)} to ${workPicker(randVerb)} a box containing one \n
+            ${wordPicker(randAdj)} ${wordPicker(randNoun)}. Suprised by this, the ${wordPicker(randNoun)} watched as the ${wordPicker(randNoun)} \n
+            tried to ${wordPicker(randVerb)} its way to the front. The ${wordPicker(randAdj)} look on its ${wordPicker(randNoun)} was obvious to anyone \n
+            who tried to have a ${wordPicker(randVerb)} at it.`);
+            break;
+        case (pickMessage === 2):
+            console.log(`Recipe for Making Seared ${wordPicker(randNoun)} \n
+            Ingredients: \n Two cups of roasted ${wordPicker(randNoun)} \n Three lbs of choppped ${wordPicker(randNoun)} \n
+            Two Onions \n Butter \n Two tablespoons of ${wordPicker(randAdj)} ${wordPicker(randNoun)} \n Salt, because you're going to need it. \n
+            In a ${wordPicker(randAdj)} pot, combine the ${wordPicker(randNoun)} and ${wordPicker(randNoun)}. ${wordPicker(randVerb)} vigorously. \n
+            Next, melt the butter \n Make sure to ${wordPicker(randVerb)} before adding the ${wordPicker(randNoun)}. Otherwise, you may have to start over. \n
+            Pour into another ${wordPicker(randAdj)} bowl with the butter, and ${wordPicker(randVerb)} the onions directly on top.\n
+            Set oven to 350 degrees. ${wordPicker(randVerb)} to your mixture before you ${wordPicker(randVerb)} it in the oven \n
+            Bake for 30-35 minutes. Remove from the oven. \n
+            What in heaven's ${wordPicker(randNoun)}} did you just create?`);
+            break;
+        case (pickMessage === 3):
+            console.log(`Here is your ${wordPicker(randAdj)} fortune: \n`);
+            break;
+        case (pickMessage === 4):
+            console.log(`Here is some great life advice`);
+    }
+    
+}
+
+adLibPicker();
